@@ -37,13 +37,13 @@ eval "$(anyenv init -)"
 
 anyenv install rbenv
 eval "$(anyenv init -)"
-rbenv install 2.1.0
+rbenv install 2.1.0 --verbose
 rbenv global 2.1.0
 rbenv rehash
 gem install homesick
 rbenv rehash
 homesick clone k1LoW/dotfiles
-homesick symlink dotfiles -f
+homesick symlink dotfiles --force
 
 echo '$HOME/.devlocal/bin/zsh' >> ~/.bashrc
 source ~/.bashrc
