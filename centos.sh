@@ -24,7 +24,7 @@ cd $DEVLOCAL/source
 curl -L -o $DEVLOCAL/source/emacs.tar.gz "http://ftp.jaist.ac.jp/pub/GNU/emacs/emacs-24.3.tar.gz"
 tar xzvf emacs.tar.gz
 cd emacs-24.3
-LIBS=-ltinfo ./configure --prefix=$DEVLOCAL LDFLAGS=-L$DEVLOCAL/lib --without-pop --without-kerberos --without-mmdf --without-sound --without-wide-int --without-xpm --without-jpeg --without-tiff --without-gif --without-png --without-rsvg --without-xml2 --without-imagemagick --without-xft --without-libotf --without-m17n-flt --without-xaw3d --without-xim --without-ns --without-gpm --without-dbus --without-gconf --without-gsettings --without-selinux --without-gnutls --without-x
+LIBS=-ltinfo ./configure --prefix=$DEVLOCAL --without-pop --without-kerberos --without-mmdf --without-sound --without-wide-int --without-xpm --without-jpeg --without-tiff --without-gif --without-png --without-rsvg --without-xml2 --without-imagemagick --without-xft --without-libotf --without-m17n-flt --without-xaw3d --without-xim --without-ns --without-gpm --without-dbus --without-gconf --without-gsettings --without-selinux --without-gnutls --without-x
 make
 make install
 
