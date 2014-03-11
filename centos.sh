@@ -47,4 +47,3 @@ homesick symlink dotfiles --force
 
 echo '$HOME/.devlocal/bin/zsh' >> ~/.bashrc
 source ~/.bashrc
-exec $SHELL -l
