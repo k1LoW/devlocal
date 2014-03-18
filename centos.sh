@@ -50,5 +50,14 @@ rbenv rehash
 homesick clone k1LoW/dotfiles
 homesick symlink dotfiles --force
 
+# editorconfig
+anyenv install ndenv
+eval "$(anyenv init -)"
+ndenv install v0.11.11 --verbose
+ndenv global v0.11.11
+ndenv rehash
+npm install -g editorconfig
+ndenv rehash
+
 echo '$HOME/.devlocal/bin/zsh' >> ~/.bashrc
 source ~/.bashrc
