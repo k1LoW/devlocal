@@ -15,6 +15,15 @@ cd git-1.9.0
 make
 make install
 
+# ctags
+cd $DEVLOCAL/source
+curl -L -o $DEVLOCAL/source/ctags.tar.gz "http://hp.vector.co.jp/authors/VA025040/ctags/downloads/ctags-5.8j2.tar.gz"
+tar xzvf ctags.tar.gz
+cd ctags-5.8j2.tar.gz
+./configure --prefix=$DEVLOCAL
+make
+make install
+
 # zsh
 cd $DEVLOCAL/source
 curl -L -o $DEVLOCAL/source/zsh.tar.gz "http://downloads.sourceforge.net/project/zsh/zsh/5.0.5/zsh-5.0.5.tar.gz?r=&ts=1394454707&use_mirror=jaist"
@@ -24,11 +33,21 @@ cd zsh-5.0.5
 make
 make install
 
+# autoconf
+cd $DEVLOCAL/source
+curl -L -o $DEVLOCAL/source/autoconf.tar.gz "http://ftp.jaist.ac.jp/pub/GNU/autoconf/autoconf-2.69.tar.gz"
+tar xzvf autoconf.tar.gz
+cd autoconf-2.29
+./configure --prefix=$DEVLOCAL
+make
+make install
+
 # emacs
 cd $DEVLOCAL/source
-git clone git://git.savannah.gnu.org/emacs.git
+git clone --depth 1 git://git.savannah.gnu.org/emacs.git
 cd emacs
-LIBS=-ltinfo ./configure --prefix=$DEVLOCAL --without-pop --without-kerberos --without-mmdf --without-sound --without-wide-int --without-xpm --without-jpeg --without-tiff --without-gif --without-png --without-rsvg --without-xml2 --without-imagemagick --without-xft --without-libotf --without-m17n-flt --without-xaw3d --without-xim --without-ns --without-gpm --without-dbus --without-gconf --without-gsettings --without-selinux --without-gnutls --without-x
+./autogen.sh
+LIBS=-ltinfo ./configure --prefix=$DEVLOCAL --without-pop --without-kerberos --without-mmdf --without-sound --without-wide-int --without-xpm --without-jpeg --without-tiff --without-gif --without-png --without-rsvg --without-xml2 --without-imagemagick --without-xft --without-libotf --without-m17n-flt --without-xaw3d --without-xim --without-ns --without-gpm --without-dbus --without-gconf --without-gsettings --without-selinux --without-gnutls --without-makeinfo --without-x
 make
 make install
 
