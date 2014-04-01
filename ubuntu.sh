@@ -1,2 +1,3 @@
 #!/bin/bash
-# sudo apt-get -y install gcc make openssl-devel zlib-devel ncurses-devel perl-devel gettext-devel curl-devel expat-devel
+sudo apt-get update
+sudo apt-get -y install ssh expat zlib1g zlib1g-dev tk python gettext libncurses5-dev m4 automake

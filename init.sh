@@ -45,10 +45,10 @@ make
 make install
 
 # autoconf
-cd $DEVLOCAL/source
+Bcd $DEVLOCAL/source
 curl -L -o $DEVLOCAL/source/autoconf.tar.gz "http://ftp.jaist.ac.jp/pub/GNU/autoconf/autoconf-2.69.tar.gz"
 tar xzvf autoconf.tar.gz
-cd autoconf-2.29
+cd autoconf-2.69
 ./configure --prefix=$DEVLOCAL
 make
 make install
@@ -71,8 +71,8 @@ eval "$(anyenv init -)"
 # homesick
 anyenv install rbenv
 eval "$(anyenv init -)"
-rbenv install 2.1.0 --verbose
-rbenv global 2.1.0
+rbenv install 2.1.1 --verbose
+rbenv global 2.1.1
 rbenv rehash
 gem install homesick
 rbenv rehash
@@ -82,8 +82,8 @@ homesick symlink dotfiles --force
 # editorconfig
 anyenv install ndenv
 eval "$(anyenv init -)"
-ndenv install v0.11.11 --verbose
-ndenv global v0.11.11
+ndenv install v0.11.12 --verbose
+ndenv global v0.11.12
 ndenv rehash
 npm install -g editorconfig
 ndenv rehash
