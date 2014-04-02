@@ -18,52 +18,19 @@ mkdir -p $DEVLOCAL/source
 export PATH="$DEVLOCAL/bin:$PATH"
 
 # git
-cd $DEVLOCAL/source
-curl -L -o $DEVLOCAL/source/git.tar.gz "https://git-core.googlecode.com/files/git-1.9.0.tar.gz"
-tar xzvf git.tar.gz
-cd git-1.9.0
-./configure --prefix=$DEVLOCAL
-make
-make install
+curl $script_url/git.sh|bash
 
 # ctags
-cd $DEVLOCAL/source
-curl -L -o $DEVLOCAL/source/ctags.tar.gz "http://hp.vector.co.jp/authors/VA025040/ctags/downloads/ctags-5.8j2.tar.gz"
-tar xzvf ctags.tar.gz
-cd ctags-5.8j2.tar.gz
-./configure --prefix=$DEVLOCAL
-make
-make install
+curl $script_url/ctags.sh|bash
 
 # zsh
-cd $DEVLOCAL/source
-curl -L -o $DEVLOCAL/source/zsh.tar.gz "http://downloads.sourceforge.net/project/zsh/zsh/5.0.5/zsh-5.0.5.tar.gz?r=&ts=1394454707&use_mirror=jaist"
-tar xzvf zsh.tar.gz
-cd zsh-5.0.5
-./configure --prefix=$DEVLOCAL --enable-multibyte --enable-locale
-make
-make install
-
-# autoconf
-Bcd $DEVLOCAL/source
-curl -L -o $DEVLOCAL/source/autoconf.tar.gz "http://ftp.jaist.ac.jp/pub/GNU/autoconf/autoconf-2.69.tar.gz"
-tar xzvf autoconf.tar.gz
-cd autoconf-2.69
-./configure --prefix=$DEVLOCAL
-make
-make install
+curl $script_url/zsh.sh|bash
 
 # emacs
-cd $DEVLOCAL/source
-git clone --depth 1 git://git.savannah.gnu.org/emacs.git
-cd emacs
-./autogen.sh
-LIBS=-ltinfo ./configure --prefix=$DEVLOCAL --without-pop --without-kerberos --without-mmdf --without-sound --without-wide-int --without-xpm --without-jpeg --without-tiff --without-gif --without-png --without-rsvg --without-xml2 --without-imagemagick --without-xft --without-libotf --without-m17n-flt --without-xaw3d --without-xim --without-ns --without-gpm --without-dbus --without-gconf --without-gsettings --without-selinux --without-gnutls --without-makeinfo --without-x
-make
-make install
+curl $script_url/emacs.sh|bash
 
 # anyenv
-git clone https://github.com/riywo/anyenv ~/.anyenv
+git clone git@github.com:riywo/anyenv.git ~/.anyenv
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
