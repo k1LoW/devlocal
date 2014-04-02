@@ -30,7 +30,7 @@ curl $script_url/zsh.sh|bash
 curl $script_url/emacs.sh|bash
 
 # anyenv
-git clone git@github.com:riywo/anyenv.git ~/.anyenv
+git clone https://github.com/riywo/anyenv ~/.anyenv
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
