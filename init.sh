@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -z $script_url ];then
-    export script_url="https://raw.githubusercontent.com/k1LoW/devlocal/master/"
+    export script_url="https://raw.githubusercontent.com/k1LoW/devlocal/master"
 fi
 
 tmp=`cat /etc/issue | head -n 1`
