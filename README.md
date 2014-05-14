@@ -1,3 +1,3 @@
 # devlocal
 
-    bash < <(curl https://raw.github.com/k1LoW/devlocal/master/init.sh)
+    bash < <(curl https://raw.githubusercontent.com/k1LoW/devlocal/master/init.sh)

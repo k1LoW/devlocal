@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -z $script_url ];then
-    export script_url="https://raw.github.com/k1LoW/devlocal/master/"
+    export script_url="https://raw.githubusercontent.com/k1LoW/devlocal/master/"
 fi
 
 tmp=`cat /etc/issue | head -n 1`
@@ -54,6 +54,9 @@ ndenv global v0.11.12
 ndenv rehash
 npm install -g editorconfig
 ndenv rehash
+
+# composer
+curl $script_url/composer.sh|bash
 
 echo '$HOME/.devlocal/bin/zsh' >> ~/.bashrc
 source ~/.bashrc
