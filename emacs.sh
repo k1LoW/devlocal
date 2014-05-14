@@ -2,7 +2,7 @@
 DEVLOCAL=$HOME/.devlocal
 
 # autoconf
-Bcd $DEVLOCAL/source
+cd $DEVLOCAL/source
 curl -L -o $DEVLOCAL/source/autoconf.tar.gz "http://ftp.jaist.ac.jp/pub/GNU/autoconf/autoconf-2.69.tar.gz"
 tar xzvf autoconf.tar.gz
 cd autoconf-2.69
