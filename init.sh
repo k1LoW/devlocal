@@ -20,14 +20,14 @@ export PATH="$DEVLOCAL/bin:$PATH"
 # git
 curl $script_url/git.sh|bash
 
-# ctags
-curl $script_url/ctags.sh|bash
-
 # zsh
 curl $script_url/zsh.sh|bash
 
 # emacs
 curl $script_url/emacs.sh|bash
+
+# ctags
+curl $script_url/ctags.sh|bash
 
 # anyenv
 git clone https://github.com/riywo/anyenv ~/.anyenv
@@ -38,8 +38,8 @@ eval "$(anyenv init -)"
 # homesick
 anyenv install rbenv
 eval "$(anyenv init -)"
-rbenv install 2.1.1 --verbose
-rbenv global 2.1.1
+rbenv install 2.1.2 --verbose
+rbenv global 2.1.2
 rbenv rehash
 gem install homesick
 rbenv rehash
