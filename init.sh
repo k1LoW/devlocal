@@ -29,6 +29,9 @@ curl $script_url/emacs.sh|bash
 # ctags
 curl $script_url/ctags.sh|bash
 
+# GNU GLOBAL
+curl $script_url/gtags.sh|bash
+
 # anyenv
 git clone https://github.com/riywo/anyenv ~/.anyenv
 
@@ -54,6 +57,15 @@ ndenv global v0.11.12
 ndenv rehash
 npm install -g editorconfig
 ndenv rehash
+
+# pygments
+anyenv install pyenv
+eval "$(anyenv init -)"
+pyenv install 2.7.8 --verbose
+pyenv global 2.7.8
+pyenv rehash
+pip install pygments
+pyenv rehash
 
 # composer
 curl $script_url/composer.sh|bash
