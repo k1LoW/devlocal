@@ -67,6 +67,9 @@ pyenv rehash
 pip install pygments
 pyenv rehash
 
+# peco
+curl $script_url/peco.sh|bash
+
 # composer
 curl $script_url/composer.sh|bash
 
