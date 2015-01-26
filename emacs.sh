@@ -10,6 +10,15 @@ cd autoconf-2.69
 make
 make install
 
+# automake
+cd $DEVLOCAL/source
+curl -L -o $DEVLOCAL/source/automake.tar.gz "http://ftp.jaist.ac.jp/pub/GNU/automake/automake-1.15.tar.gz"
+tar xzvf automake.tar.gz
+cd automake-1.15
+./configure --prefix=$DEVLOCAL
+make
+make install
+
 # emacs
 cd $DEVLOCAL/source
 git clone --depth 1 git://git.savannah.gnu.org/emacs.git
