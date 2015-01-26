@@ -1,6 +1,8 @@
 #!/bin/bash
 DEVLOCAL=$HOME/.devlocal
 
+export PATH="$DEVLOCAL/bin:$PATH"
+
 # autoconf
 cd $DEVLOCAL/source
 curl -L -o $DEVLOCAL/source/autoconf.tar.gz "http://ftp.jaist.ac.jp/pub/GNU/autoconf/autoconf-2.69.tar.gz"
