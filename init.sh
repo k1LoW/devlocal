@@ -42,8 +42,8 @@ eval "$(anyenv init -)"
 # homesick
 anyenv install rbenv
 eval "$(anyenv init -)"
-rbenv install 2.1.4 --verbose
-rbenv global 2.1.4
+rbenv install 2.1.5 --verbose
+rbenv global 2.1.5
 rbenv rehash
 gem install homesick
 rbenv rehash
