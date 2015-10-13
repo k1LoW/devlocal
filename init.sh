@@ -53,8 +53,8 @@ homesick symlink dotfiles --force
 # editorconfig
 anyenv install ndenv
 eval "$(anyenv init -)"
-ndenv install v0.11.12 --verbose
-ndenv global v0.11.12
+ndenv install v0.12.7 --verbose
+ndenv global v0.12.7
 ndenv rehash
 npm install -g editorconfig
 ndenv rehash
