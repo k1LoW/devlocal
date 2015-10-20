@@ -23,7 +23,7 @@ make install
 
 # emacs
 cd $DEVLOCAL/source
-git clone --depth 1 git://git.savannah.gnu.org/emacs.git
+git clone --depth 1 git://git.savannah.gnu.org/emacs.git -b emacs-24
 cd emacs
 ./autogen.sh
 LIBS=-ltinfo ./configure --prefix=$DEVLOCAL --without-pop --without-kerberos --without-mmdf --without-sound --without-wide-int --without-xpm --without-jpeg --without-tiff --without-gif --without-png --without-rsvg --without-xml2 --without-imagemagick --without-xft --without-libotf --without-m17n-flt --without-xaw3d --without-xim --without-ns --without-gpm --without-dbus --without-gconf --without-gsettings --without-selinux --without-gnutls --without-makeinfo --without-x
