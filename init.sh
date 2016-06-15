@@ -4,14 +4,7 @@ if [ -z ${script_url:-} ];then
     export script_url="https://raw.githubusercontent.com/k1LoW/devlocal/master"
 fi
 
-tmp=`cat /etc/issue | head -n 1`
-DIST=`echo $tmp | awk '{print $1}'`
-
-if [[ $DIST =~ "CentOS" ]]; then
-    curl $script_url/centos.sh|bash
-elif [[ $DIST =~ "Ubuntu" ]]; then
-    curl $script_url/ubuntu.sh|bash
-fi
+curl $script_url/centos.sh|bash
 
 DEVLOCAL=$HOME/.devlocal
 mkdir -p $DEVLOCAL/source
