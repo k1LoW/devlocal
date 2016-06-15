@@ -52,6 +52,8 @@ ndenv rehash
 npm install -g editorconfig
 ndenv rehash
 
+sudo yum install patch -y
+
 # pygments
 anyenv install pyenv
 eval "$(anyenv init -)"
