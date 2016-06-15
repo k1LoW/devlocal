@@ -35,8 +35,8 @@ eval "$(anyenv init -)"
 # homesick
 anyenv install rbenv
 eval "$(anyenv init -)"
-rbenv install 2.1.5 --verbose
-rbenv global 2.1.5
+rbenv install 2.2.5 --verbose
+rbenv global 2.2.5
 rbenv rehash
 gem install homesick
 rbenv rehash
@@ -46,8 +46,8 @@ homesick symlink dotfiles --force
 # editorconfig
 anyenv install ndenv
 eval "$(anyenv init -)"
-ndenv install v0.12.7 --verbose
-ndenv global v0.12.7
+ndenv install v4.4.5 --verbose
+ndenv global v4.4.5
 ndenv rehash
 npm install -g editorconfig
 ndenv rehash
