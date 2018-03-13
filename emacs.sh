@@ -7,9 +7,9 @@ sudo yum install ncurses-devel
 
 # emacs
 cd $DEVLOCAL/source
-curl -L -o $DEVLOCAL/source/emacs.tar.gz "http://ftp.gnu.org/pub/gnu/emacs/emacs-24.5.tar.gz"
+curl -L -o $DEVLOCAL/source/emacs.tar.gz "http://ftp.gnu.org/pub/gnu/emacs/emacs-$EMACS_VERSION.tar.gz"
 tar zxvf emacs.tar.gz
-cd emacs-24.5/
+cd $EMACS_VERSION/
 ./configure --prefix=$DEVLOCAL --without-x
 make
 make install
