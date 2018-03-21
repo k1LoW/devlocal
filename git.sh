@@ -1,5 +1,6 @@
 #!/bin/bash
-DEVLOCAL=$HOME/.devlocal
+export DEVLOCAL=$HOME/.devlocal
+export PATH=$DEVLOCAL/bin:$PATH
 
 cd $DEVLOCAL/source
 curl -L -o $DEVLOCAL/source/git.tar.gz "https://www.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.gz"

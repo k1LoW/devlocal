@@ -1,7 +1,6 @@
 #!/bin/bash
-DEVLOCAL=$HOME/.devlocal
-
-export PATH="$DEVLOCAL/bin:$PATH"
+export DEVLOCAL=$HOME/.devlocal
+export PATH=$DEVLOCAL/bin:$PATH
 
 sudo yum install ncurses-devel
 

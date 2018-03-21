@@ -1,12 +1,12 @@
 #!/bin/bash
-set -u
+set -eu
 if [ -z ${script_url:-} ];then
     export script_url="https://raw.githubusercontent.com/k1LoW/devlocal/master"
 fi
 
 sudo yum -y install gcc make openssl-devel zlib-devel ncurses-devel perl-devel gettext-devel curl-devel expat-devel texinfo readline-devel
 
-DEVLOCAL=$HOME/.devlocal
+export DEVLOCAL=$HOME/.devlocal
 mkdir -p $DEVLOCAL/source
 
 export PATH="$DEVLOCAL/bin:$PATH"
