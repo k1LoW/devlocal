@@ -36,5 +36,6 @@ eval "$(anyenv init -)"
 anyenv install rbenv
 anyenv install goenv
 
-echo '$HOME/.devlocal/bin/zsh' >> ~/.bashrc
-source ~/.bashrc
+echo 'if [ -f $HOME/.zshrc ];then $HOME/.devlocal/bin/zsh; fi' >> ~/.bashrc
+
+eval "(exec $SHELL -l)"
