@@ -23,8 +23,18 @@ curl $script_url/zsh.sh|bash
 export EMACS_VERSION="25.3"
 curl $script_url/emacs.sh|bash
 
+# ctags
+export CTAGS_VERSION="5.8j2"
+curl $script_url/ctags.sh|bash
+
 # anyenv
 git clone https://github.com/riywo/anyenv ~/.anyenv
+
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
+anyenv install rbenv
+anyenv install goenv
 
 echo '$HOME/.devlocal/bin/zsh' >> ~/.bashrc
 source ~/.bashrc

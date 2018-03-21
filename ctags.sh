@@ -2,9 +2,9 @@
 DEVLOCAL=$HOME/.devlocal
 
 cd $DEVLOCAL/source
-curl -L -o $DEVLOCAL/source/ctags.tar.gz "http://hp.vector.co.jp/authors/VA025040/ctags/downloads/ctags-5.8j2.tar.gz"
+curl -L -o $DEVLOCAL/source/ctags.tar.gz "http://hp.vector.co.jp/authors/VA025040/ctags/downloads/ctags-$CTAGS_VERSION.tar.gz"
 tar xzvf ctags.tar.gz
-cd ctags-5.8j2
+cd ctags-$CTAGS_VERSION
 ./configure --prefix=$DEVLOCAL
 make
 make install
