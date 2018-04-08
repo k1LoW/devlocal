@@ -13,7 +13,7 @@ if exists yum; then
 fi
 
 if exists apt-get; then
-    sudo apt-get -y install build-essential checkinstall libxpm-dev libjpeg-dev libgif-dev libtiff5-dev tcl-dev gettext libcurl4-gnutls-dev
+    sudo apt-get -y install build-essential checkinstall libxpm-dev libjpeg-dev libgif-dev libtiff5-dev tcl-dev gettext libcurl4-gnutls-dev ncurses-dev
 fi
 
 export DEVLOCAL=$HOME/.devlocal
