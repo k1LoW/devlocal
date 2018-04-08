@@ -4,14 +4,16 @@ if [ -z ${script_url:-} ];then
     export script_url="https://raw.githubusercontent.com/k1LoW/devlocal/master"
 fi
 
-function exists { which $1 &> /dev/null }
+function exists() {
+    which $1 &> /dev/null
+}
 
 if exists yum; then
     sudo yum -y install gcc make openssl-devel zlib-devel ncurses-devel perl-devel gettext-devel curl-devel expat-devel texinfo readline-devel
 fi
 
 if exists apt-get; then
-    sudo apt-get -y install build-essential checkinstall libxpm-dev libjpeg-dev libgif-dev libtiff5-dev
+    sudo apt-get -y install build-essential checkinstall libxpm-dev libjpeg-dev libgif-dev libtiff5-dev tcl-dev gettext libcurl4-gnutls-dev
 fi
 
 export DEVLOCAL=$HOME/.devlocal
